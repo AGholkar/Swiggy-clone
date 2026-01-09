@@ -1,0 +1,66 @@
+{
+  "restaurant": "Flavor Junction",
+  "location": "Indiranagar, Bangalore",
+  "menu": [
+    {
+      "id": 101,
+      "name": "Gobi Manchurian",
+      "category": "Starter",
+      "price": 180,
+      "description": "Crispy cauliflower florets tossed in a spicy Indo-Chinese manchurian sauce.",
+      "is_veg": true,
+      "rating": 4.2,
+      "image_url": "/gobi-manchurian.png"
+    },
+    {
+      "id": 102,
+      "name": "Chicken Dum Biryani",
+      "category": "Main Course",
+      "price": 320,
+      "description": "Fragrant long-grain basmati rice cooked with succulent chicken and secret spices.",
+      "is_veg": false,
+      "rating": 4.8,
+      "image_url": "/chicken-dum-biryani.png"
+    },
+    {
+      "id": 103,
+      "name": "Paneer Tikka",
+      "category": "Starter",
+      "price": 240,
+      "description": "Cottage cheese cubes marinated in yogurt and spices, grilled in a tandoor.",
+      "is_veg": true,
+      "rating": 4.5,
+      "image_url": "/paneer-tikka.png"
+    },
+    {
+      "id": 104,
+      "name": "King Fish Thali",
+      "category": "Thali",
+      "price": 450,
+      "description": "Authentic coastal thali featuring rava fried King Fish, curry, rice, and solkadhi.",
+      "is_veg": false,
+      "rating": 4.7,
+      "image_url": "/king-fishthali.png"
+    },
+    {
+      "id": 105,
+      "name": "Butter Chicken",
+      "category": "Main Course",
+      "price": 350,
+      "description": "Tender chicken pieces simmered in a rich, creamy tomato-based gravy.",
+      "is_veg": false,
+      "rating": 4.6,
+      "image_url": "/butter-chicken.png"
+    },
+    {
+      "id": 106,
+      "name": "Mushroom Gravy",
+      "category": "Main Course",
+      "price": 280,
+      "description": "Fresh button mushrooms cooked in a thick, spiced onion-tomato gravy.",
+      "is_veg": true,
+      "rating": 4.1,
+      "image_url": "/mushroom-gravy.png"
+    }
+  ]
+}

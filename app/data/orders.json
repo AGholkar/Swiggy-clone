@@ -1,0 +1,114 @@
+{
+  "orders": [
+    {
+      "order_id": "SWG1001",
+      "customer_name": "Rahul Sharma",
+      "restaurant": "Flavor Junction",
+      "total_amount": 500,
+      "payment_method": "UPI",
+      "order_status": "Delivered",
+      "delivery_partner": "Ramesh Patil",
+      "day": "Sunday",
+      "order_time": "13:45"
+    },
+    {
+      "order_id": "SWG1002",
+      "customer_name": "Sneha Kulkarni",
+      "restaurant": "Spice Route",
+      "total_amount": 630,
+      "payment_method": "Card",
+      "order_status": "Delivered",
+      "delivery_partner": "Suresh Naik",
+      "day": "Monday",
+      "order_time": "19:10"
+    },
+    {
+      "order_id": "SWG1003",
+      "customer_name": "Amit Verma",
+      "restaurant": "Urban Tandoor",
+      "total_amount": 480,
+      "payment_method": "COD",
+      "order_status": "Cancelled",
+      "delivery_partner": "None",
+      "day": "Monday",
+      "order_time": "20:05"
+    },
+    {
+      "order_id": "SWG1004",
+      "customer_name": "Neha Desai",
+      "restaurant": "Coastal Curry",
+      "total_amount": 450,
+      "payment_method": "UPI",
+      "order_status": "Delivered",
+      "delivery_partner": "Mahesh Korgaonkar",
+      "day": "Saturday",
+      "order_time": "14:00"
+    },
+    {
+      "order_id": "SWG1005",
+      "customer_name": "Vikram Singh",
+      "restaurant": "Bistro 57",
+      "total_amount": 210,
+      "payment_method": "UPI",
+      "order_status": "Delivered",
+      "delivery_partner": "Sunil Verma",
+      "day": "Tuesday",
+      "order_time": "17:30"
+    },
+    {
+      "order_id": "SWG1006",
+      "customer_name": "Priya Nair",
+      "restaurant": "The Bowl Company",
+      "total_amount": 890,
+      "payment_method": "Card",
+      "order_status": "Delivered",
+      "delivery_partner": "Ravi Kumar",
+      "day": "Thursday",
+      "order_time": "21:45"
+    },
+    {
+      "order_id": "SWG1007",
+      "customer_name": "Arjun Mehta",
+      "restaurant": "Leon Grill",
+      "total_amount": 350,
+      "payment_method": "UPI",
+      "order_status": "Delivered",
+      "delivery_partner": "Deepak Singh",
+      "day": "Thursday",
+      "order_time": "23:30"
+    },
+    {
+      "order_id": "SWG1008",
+      "customer_name": "Riya Kapoor",
+      "restaurant": "Truffles",
+      "total_amount": 150,
+      "payment_method": "COD",
+      "order_status": "Delivered",
+      "delivery_partner": "Pawan L.",
+      "day": "Friday",
+      "order_time": "16:15"
+    },
+    {
+      "order_id": "SWG1009",
+      "customer_name": "Karan Johar",
+      "restaurant": "Empire Restaurant",
+      "total_amount": 1100,
+      "payment_method": "Card",
+      "order_status": "Delivered",
+      "delivery_partner": "Vijay M.",
+      "day": "Wednesday",
+      "order_time": "13:00"
+    },
+    {
+      "order_id": "SWG1010",
+      "customer_name": "Ananya Pandey",
+      "restaurant": "Meghana Foods",
+      "total_amount": 540,
+      "payment_method": "UPI",
+      "order_status": "Delivered",
+      "delivery_partner": "Sagar P.",
+      "day": "Thursday",
+      "order_time": "19:50"
+    }
+  ]
+}

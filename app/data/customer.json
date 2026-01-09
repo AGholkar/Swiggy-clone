@@ -1,0 +1,105 @@
+{
+  "total_customers": 10,
+  "customers": [
+    {
+      "id": "CUS001",
+      "name": "Rahul Sharma",
+      "email": "rahul.s@example.com",
+      "phone": "+91 98765 43210",
+      "location": "Indiranagar, Bangalore",
+      "total_orders": 15,
+      "member_since": "2023-05-12",
+      "status": "Active"
+    },
+    {
+      "id": "CUS002",
+      "name": "Priya Patel",
+      "email": "priya.p@example.com",
+      "phone": "+91 91234 56789",
+      "location": "Whitefield, Bangalore",
+      "total_orders": 8,
+      "member_since": "2024-01-20",
+      "status": "Active"
+    },
+    {
+      "id": "CUS003",
+      "name": "Amit Kumar",
+      "email": "amit.k@example.com",
+      "phone": "+91 99887 76655",
+      "location": "Koramangala, Bangalore",
+      "total_orders": 24,
+      "member_since": "2022-11-05",
+      "status": "Elite"
+    },
+    {
+      "id": "CUS004",
+      "name": "Sneha Reddy",
+      "email": "sneha.r@example.com",
+      "phone": "+91 90000 11122",
+      "location": "HSR Layout, Bangalore",
+      "total_orders": 3,
+      "member_since": "2024-03-15",
+      "status": "New"
+    },
+    {
+      "id": "CUS005",
+      "name": "Vikram Singh",
+      "email": "vikram.v@example.com",
+      "phone": "+91 92233 44556",
+      "location": "Jayanagar, Bangalore",
+      "total_orders": 12,
+      "member_since": "2023-08-22",
+      "status": "Active"
+    },
+    {
+      "id": "CUS006",
+      "name": "Ananya Iyer",
+      "email": "ananya.i@example.com",
+      "phone": "+91 93344 55667",
+      "location": "Malleswaram, Bangalore",
+      "total_orders": 45,
+      "member_since": "2022-02-10",
+      "status": "Elite"
+    },
+    {
+      "id": "CUS007",
+      "name": "Rohan Das",
+      "email": "rohan.d@example.com",
+      "phone": "+91 94455 66778",
+      "location": "MG Road, Bangalore",
+      "total_orders": 0,
+      "member_since": "2024-05-01",
+      "status": "New"
+    },
+    {
+      "id": "CUS008",
+      "name": "Meera Nair",
+      "email": "meera.n@example.com",
+      "phone": "+91 95566 77889",
+      "location": "Electronic City, Bangalore",
+      "total_orders": 19,
+      "member_since": "2023-04-18",
+      "status": "Active"
+    },
+    {
+      "id": "CUS009",
+      "name": "Arjun Rao",
+      "email": "arjun.r@example.com",
+      "phone": "+91 96677 88990",
+      "location": "BTM Layout, Bangalore",
+      "total_orders": 7,
+      "member_since": "2024-02-28",
+      "status": "Active"
+    },
+    {
+      "id": "CUS010",
+      "name": "Sonia Malhotra",
+      "email": "sonia.m@example.com",
+      "phone": "+91 97788 99001",
+      "location": "Banashankari, Bangalore",
+      "total_orders": 31,
+      "member_since": "2022-09-14",
+      "status": "Elite"
+    }
+  ]
+}

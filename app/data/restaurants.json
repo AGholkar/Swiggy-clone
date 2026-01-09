@@ -1,0 +1,104 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "The Truffle Terrace",
+      "cuisine": "Continental",
+      "location": "Indiranagar",
+      "rating": 4.5,
+      "average_cost": 1200,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Spice Route",
+      "cuisine": "North Indian",
+      "location": "Koramangala",
+      "rating": 4.2,
+      "average_cost": 800,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Sushi Samurai",
+      "cuisine": "Japanese",
+      "location": "MG Road",
+      "rating": 4.8,
+      "average_cost": 2500,
+      "status": "Elite",
+      "image_url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Coastal Curries",
+      "cuisine": "Mangalorean",
+      "location": "Jayanagar",
+      "rating": 4.4,
+      "average_cost": 950,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1589187151003-0dd4a6ad1aa7?w=400&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Bake & Bean",
+      "cuisine": "Bakery & Cafe",
+      "location": "HSR Layout",
+      "rating": 4.1,
+      "average_cost": 500,
+      "status": "New",
+      "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Dosa Kingdom",
+      "cuisine": "South Indian",
+      "location": "Malleshwaram",
+      "rating": 4.6,
+      "average_cost": 300,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80"
+    },
+    {
+      "id": 7,
+      "name": "The Pizza Press",
+      "cuisine": "Italian",
+      "location": "Whitefield",
+      "rating": 4.3,
+      "average_cost": 1100,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80"
+    },
+    {
+      "id": 8,
+      "name": "Biryani Badshah",
+      "cuisine": "Mughlai",
+      "location": "BTM Layout",
+      "rating": 4.7,
+      "average_cost": 750,
+      "status": "Elite",
+      "image_url": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80"
+    },
+    {
+      "id": 9,
+      "name": "Green Garden",
+      "cuisine": "Pure Veg",
+      "location": "Basavanagudi",
+      "rating": 4.0,
+      "average_cost": 600,
+      "status": "Active",
+      "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"
+    },
+    {
+      "id": 10,
+      "name": "Wok n Roll",
+      "cuisine": "Chinese",
+      "location": "Electronic City",
+      "rating": 3.9,
+      "average_cost": 850,
+      "status": "New",
+      "image_url": "https://images.unsplash.com/photo-1552611052-33e04de081de?w=400&q=80"
+    }
+  ]
+}
