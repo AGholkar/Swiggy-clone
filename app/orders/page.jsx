@@ -1,7 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import ordersData from '../data/orders.json'
-import Loader from '../Components/Loader'
+// Fixed the typo: changed '../components/loaderoader' to '../components/loader'
+import Loader from '../components/loader'
 
 export default function OrdersPage() {
   const [isLoading, setIsLoading] = useState(true)

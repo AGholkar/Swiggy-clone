@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react'
 // Fixed path: Two dots (..) to go up to 'app', then into 'data'
 import customerData from '../data/customer.json'
-import Loader from '../Components/Loader'
+// FIX: Changed '../Components/Loader' to '../components/loader' to match your file system
+import Loader from '../components/loader'
 
 export default function CustomerPage() {
   const [isLoading, setIsLoading] = useState(true)

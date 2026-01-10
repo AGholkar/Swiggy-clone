@@ -1,21 +1,20 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import restaurantData from '../data/restaurants.json'
-// Path adjusted to reach app/Components/Loader.jsx from app/restaurants/
-import Loader from '../Components/Loader' 
+// FIX: Changed '../Components/Loader' to '../components/loader' 
+// to match your actual file system
+import Loader from '../components/loader' 
 
 export default function RestaurantsPage() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Show loader for 1.5 seconds to match your other pages
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 1500)
     return () => clearTimeout(timer)
   }, [])
 
-  // Safety: Extract the array from the JSON object
   const restaurants = restaurantData?.restaurants || []
 
   if (isLoading) {
@@ -46,7 +45,6 @@ export default function RestaurantsPage() {
             {restaurants.length > 0 ? (
               restaurants.map((res) => (
                 <tr key={res.id} className="hover:bg-gray-50 transition-colors">
-                  {/* Restaurant Info with Image */}
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-3">
                       <img 
@@ -76,7 +74,6 @@ export default function RestaurantsPage() {
                     </div>
                   </td>
 
-                  {/* Status Badge */}
                   <td className="py-3 px-4 text-center">
                     <span className={`px-3 py-1 rounded-full text-xs font-bold inline-block
                       ${res.status === 'Active' || res.status === 'Elite'

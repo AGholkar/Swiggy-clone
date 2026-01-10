@@ -6,6 +6,13 @@ import {
 } from 'recharts'
 import ordersData from './data/orders.json' 
 
+// 1. Define types for the StatCard props to satisfy TypeScript
+interface StatCardProps {
+  title: string;
+  value: string | number;
+  color: string;
+}
+
 export default function SwiggyDashboard() {
   const orders = ordersData.orders;
 
@@ -16,7 +23,7 @@ export default function SwiggyDashboard() {
     };
 
     orders.forEach(order => {
-      const dayKey = order.day.substring(0, 3); // Takes "Thu" from "Thursday"
+      const dayKey = order.day.substring(0, 3);
       if (dayMap[dayKey] !== undefined) dayMap[dayKey]++;
     });
 
@@ -48,9 +55,9 @@ export default function SwiggyDashboard() {
   }, [orders]);
 
   return (
-    <div className="bg-[#F8F9FB] min-h-screen p-8 space-y-8 font-sans">
+    <div className="bg-[#F8F9FB] min-h-screen p-8 space-y-8 font-sans text-gray-900">
       
-      {/* Top Stats - Calculations */}
+      {/* Top Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <StatCard title="Total Orders" value={orders.length} color="text-orange-600" />
         <StatCard title="Total Revenue" value={`₹${orders.reduce((acc, o) => acc + o.total_amount, 0)}`} color="text-green-600" />
@@ -59,7 +66,7 @@ export default function SwiggyDashboard() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* BAR CHART: DELIVERY TRENDS */}
+        {/* BAR CHART */}
         <div className="lg:col-span-2 bg-white p-8 'rounded-4xl' shadow-sm border border-gray-100">
           <h3 className="font-bold text-lg mb-6 text-gray-800">Weekly Delivery Trend</h3>
           <div className="h-64">
@@ -77,10 +84,10 @@ export default function SwiggyDashboard() {
           </div>
         </div>
 
-        {/* PIE CHART: MEAL DISTRIBUTION */}
+        {/* PIE CHART */}
         <div className="bg-white p-8 'rounded-4xl' shadow-sm border border-gray-100">
           <h3 className="font-bold text-lg mb-1 text-gray-800">Mealtime Distribution</h3>
-          <p className="text-[10px] text-gray-400 font-bold uppercase mb-6 tracking-widest">Live from orders.json</p>
+          <p className="text-[10px] text-gray-400 font-bold uppercase mb-6 tracking-widest">Live Data</p>
           <div className="h-48 relative flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -89,7 +96,7 @@ export default function SwiggyDashboard() {
                 </Pie>
               </PieChart>
             </ResponsiveContainer>
-            <div className="absolute text-2xl font-black text-gray-800">10</div>
+            <div className="absolute text-2xl font-black text-gray-800">{orders.length}</div>
           </div>
           <div className="mt-8 space-y-2">
             {pieChartData.map((item) => (
@@ -108,36 +115,39 @@ export default function SwiggyDashboard() {
       {/* TABLE SECTION */}
       <div className="bg-white p-8 'rounded-4xl' shadow-sm border border-gray-100">
         <h3 className="font-bold text-lg mb-6">Recent Order Details</h3>
-        <table className="w-full text-left">
-          <thead className="text-gray-400 text-[10px] font-black uppercase tracking-widest border-b border-gray-50">
-            <tr>
-              <th className="pb-4">Order</th>
-              <th className="pb-4">Restaurant</th>
-              <th className="pb-4">Partner</th>
-              <th className="pb-4">Payment</th>
-              <th className="pb-4 text-right">Amount</th>
-            </tr>
-          </thead>
-          <tbody className="text-sm font-bold text-gray-600">
-            {orders.map((order) => (
-              <tr key={order.order_id} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
-                <td className="py-4 text-orange-600 font-black">{order.order_id}</td>
-                <td className="py-4 text-gray-800">{order.restaurant}</td>
-                <td className="py-4 text-gray-500">{order.delivery_partner}</td>
-                <td className="py-4">
-                  <span className="bg-gray-100 px-2 py-1 rounded text-[10px]">{order.payment_method}</span>
-                </td>
-                <td className="py-4 text-right text-gray-900 font-black">₹{order.total_amount}</td>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left">
+            <thead className="text-gray-400 text-[10px] font-black uppercase tracking-widest border-b border-gray-50">
+              <tr>
+                <th className="pb-4">Order</th>
+                <th className="pb-4">Restaurant</th>
+                <th className="pb-4">Partner</th>
+                <th className="pb-4">Payment</th>
+                <th className="pb-4 text-right">Amount</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="text-sm font-bold text-gray-600">
+              {orders.map((order: any) => (
+                <tr key={order.order_id} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
+                  <td className="py-4 text-orange-600 font-black">{order.order_id}</td>
+                  <td className="py-4 text-gray-800">{order.restaurant}</td>
+                  <td className="py-4 text-gray-500">{order.delivery_partner}</td>
+                  <td className="py-4">
+                    <span className="bg-gray-100 px-2 py-1 rounded text-[10px]">{order.payment_method}</span>
+                  </td>
+                  <td className="py-4 text-right text-gray-900 font-black">₹{order.total_amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   )
 }
 
-function StatCard({ title, value, color }) {
+// Fixed StatCard with Types
+function StatCard({ title, value, color }: StatCardProps) {
   return (
     <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-50">
       <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">{title}</p>
