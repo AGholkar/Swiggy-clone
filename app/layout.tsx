@@ -1,24 +1,9 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+'use client'
+import React from "react"
 import "./globals.css"
 import Header from "./components/header"
 import Footer from "./components/footer"
 import Sidebar from "./components/sidebar"
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-export const metadata: Metadata = {
-  title: "Swiggy CRM",
-  description: "Swiggy Admin Dashboard",
-}
 
 export default function RootLayout({
   children,
@@ -27,27 +12,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
-        {/* Top Header */}
+      <body className="antialiased bg-gray-100 flex flex-col min-h-screen">
         <Header />
 
-        {/* Sidebar + Page Content */}
-        <div className="flex min-h-screen bg-gray-100">
+        {/* Outer wrapper: keeps sidebar and content side-by-side even on mobile */}
+        <div className="flex flex-1 overflow-hidden">
+          
+          {/* Sidebar: Narrower on mobile (w-20), standard on desktop (md:w-64) */}
+          <aside className="w-20 md:w-64 bg-white border-r shrink-0">
+            <Sidebar />
+          </aside>
 
-          {/* Sidebar */}
-          <Sidebar />
-
-          {/* Main Page Content */}
-          <main className="flex-1 p-6">
+          {/* Main Content: Takes the remaining space */}
+          <main className="flex-1 min-w-0 overflow-y-auto p-2 md:p-6">
             {children}
           </main>
-
+          
         </div>
 
-        {/* Footer */}
         <Footer />
-
       </body>
     </html>
   )
